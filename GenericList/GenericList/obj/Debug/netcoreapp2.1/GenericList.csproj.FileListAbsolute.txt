@@ -1,0 +1,11 @@
+D:\Csharp\Csharphomework\GenericList\GenericList\bin\Debug\netcoreapp2.1\GenericList.deps.json
+D:\Csharp\Csharphomework\GenericList\GenericList\bin\Debug\netcoreapp2.1\GenericList.runtimeconfig.json
+D:\Csharp\Csharphomework\GenericList\GenericList\bin\Debug\netcoreapp2.1\GenericList.runtimeconfig.dev.json
+D:\Csharp\Csharphomework\GenericList\GenericList\bin\Debug\netcoreapp2.1\GenericList.dll
+D:\Csharp\Csharphomework\GenericList\GenericList\bin\Debug\netcoreapp2.1\GenericList.pdb
+D:\Csharp\Csharphomework\GenericList\GenericList\obj\Debug\netcoreapp2.1\GenericList.csprojAssemblyReference.cache
+D:\Csharp\Csharphomework\GenericList\GenericList\obj\Debug\netcoreapp2.1\GenericList.csproj.CoreCompileInputs.cache
+D:\Csharp\Csharphomework\GenericList\GenericList\obj\Debug\netcoreapp2.1\GenericList.AssemblyInfoInputs.cache
+D:\Csharp\Csharphomework\GenericList\GenericList\obj\Debug\netcoreapp2.1\GenericList.AssemblyInfo.cs
+D:\Csharp\Csharphomework\GenericList\GenericList\obj\Debug\netcoreapp2.1\GenericList.dll
+D:\Csharp\Csharphomework\GenericList\GenericList\obj\Debug\netcoreapp2.1\GenericList.pdb
