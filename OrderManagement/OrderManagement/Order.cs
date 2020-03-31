@@ -4,22 +4,25 @@ using System.Text;
 
 namespace OrderManagement
 {
-    class Order:IComparable<Order>
+    [Serializable]
+   public class Order:IComparable<Order>
     {
-        private string orderTime, customeName,title;
-        private  uint orderNum;
-        private  double totalMoney, receivables, changeMoney;   //应收、实付、找零
+        public string orderTime, customeName,title;
+        public uint orderNum;
+        public double totalMoney, receivables, changeMoney;   //应收、实付、找零
 
         public string Title { get => title; }
-        public string OrderTime { get => orderTime;  }
+        public string OrderTime { get => orderTime; }
         public string CustomeName { get => customeName; }
-        public uint OrderNum { get => orderNum; }
-        public double TotalMoney { get=>totalMoney;}
-        public double Receivables { get=>receivables; }
-        public double ChangeMoney { get=>changeMoney; }
+        public uint OrderNum { get => orderNum;}
+        public double TotalMoney { get => totalMoney;}
+        public double Receivables { get => receivables;  }
+        public double ChangeMoney { get => changeMoney; }
         
         //存储订单明细
         public List<OrderItem> itemList = new List<OrderItem>();
+
+        public Order() { }
 
         public Order(string title,string customeName,double receivables)
         {

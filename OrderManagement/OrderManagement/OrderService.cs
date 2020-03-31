@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace OrderManagement
 {
-    class OrderService
+   public class OrderService
     {
-        List<Order> saveList = new List<Order>();
-        private uint listCount = 0;
+       public  List<Order> saveList = new List<Order>();
 
         //添加新订单
         public void AddOrder(Order order1)
@@ -51,7 +52,7 @@ namespace OrderManagement
             Console.WriteLine("抱歉，未能找到您所修改的订单！");
         }
 
-        //查询订单（按照订单号(orderNum)、商品名称(title)、客户(customeName)等字段进行查询）
+        //查询订单（按照订单号(orderNum)、商品名称(cargoName)、客户(customeName)等字段进行查询）
         public List<Order> FindOrder(uint orderNum) {
             var order = saveList.Where(s => s.OrderNum == orderNum).ToList();
             if (order.Count==0)
@@ -69,7 +70,7 @@ namespace OrderManagement
         public List<Order> FindOrder(string Name)
         {
             var order1 = from n in saveList where n.Title == Name select n;
-            var order2 = from n in saveList where n.CustomeName == Name select n;
+            var order2 = saveList.Where(order => order.itemList.Where(item => item.CargoName == Name).Count() > 0);
             if (order1.ToList().Count == 0&&order2.ToList().Count == 0)
             {
                 Console.WriteLine("抱歉,未能查询到相关订单!");
@@ -120,6 +121,26 @@ namespace OrderManagement
             }
             saveList.Sort((Order x,Order y)=>  x.TotalMoney.CompareTo(y.TotalMoney));
             return true;
+        }
+
+        //订单序列化
+        public void Export()
+        {
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<Order>));
+            using (FileStream fs = new FileStream("D:\\Order.xml", FileMode.Create)) {
+                xmlSerializer.Serialize(fs, saveList);
+            }
+        }
+
+        //订单反序列化
+        public List<Order> Import()
+        {
+            using(FileStream fs = new FileStream("D:\\Order.xml", FileMode.Open))
+            {
+                XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<Order>));
+                List<Order> ts = xmlSerializer.Deserialize(fs) as List<Order>;
+                return ts;
+            }
         }
     }
 }

@@ -4,16 +4,19 @@ using System.Text;
 
 namespace OrderManagement
 {
-    class OrderItem
+    [Serializable]
+   public class OrderItem
     {
-        private string cargoName;       
-        private uint cargoNum;
-        private double money,unitPrice;
+        public string cargoName;       
+        public uint cargoNum;
+        public double money,unitPrice;
 
         public string CargoName { get => cargoName; set => cargoName = value; }
         public uint CargoNum { get => cargoNum; set => cargoNum = value; }
         public double Money { get => money; set => money = cargoNum * unitPrice; }
         public double UnitPrice { get => unitPrice; set => unitPrice = value; }
+
+        public OrderItem() { }
 
         public OrderItem(string cargoName,uint cargoNum,double unitPrice)
         {
