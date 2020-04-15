@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.28307.960
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderManagement", "OrderManagement\OrderManagement.csproj", "{62E82A63-5E90-4DFC-AA32-C2ECB1725C9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{943E9D9B-FDFA-4FF3-9C7F-650EF9B77471}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{943E9D9B-FDFA-4FF3-9C7F-650EF9B77471}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinOrderManagement", "WinOrderManagement\WinOrderManagement.csproj", "{18375D31-73F3-4025-843D-6FC7C22D740C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{943E9D9B-FDFA-4FF3-9C7F-650EF9B77471}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{943E9D9B-FDFA-4FF3-9C7F-650EF9B77471}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{943E9D9B-FDFA-4FF3-9C7F-650EF9B77471}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18375D31-73F3-4025-843D-6FC7C22D740C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18375D31-73F3-4025-843D-6FC7C22D740C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18375D31-73F3-4025-843D-6FC7C22D740C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18375D31-73F3-4025-843D-6FC7C22D740C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
